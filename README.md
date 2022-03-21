@@ -9,4 +9,10 @@ $ ./rdifftime /tmp/dir1/ /tmp/dir2/
 ./dir1only.txt MISS /tmp/dir2/
 ./dir2only.txt MISS /tmp/dir1/
 ~~~
-In this example x.txt differs, and `/tmp/dir1/x.txt` is newer. Files which exists in both directories and has same md5sum are not reported.
+In this example x.txt differs, and `/tmp/dir1/x.txt` is newer (mtime is bigger). Files which exists in both directories and has same md5sum are not reported.
+
+Use '-i TEMPLATE' to ignore specific files (full path relative to any of dir is used, not just filename). Example:
+
+~~~
+./rdifftime /tmp/dir1/ /tmp/dir2/ -i .svn/* ./dir1*
+~~~
