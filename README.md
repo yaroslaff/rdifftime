@@ -1,7 +1,7 @@
 # rdifftime
 Compare directories recursively and (for files which content differs) report which files are most recenly modified.
 
-rdifftime uses md5 to compare content of files.
+rdifftime uses md5 to compare content of files. Better then `diff -qr`.
 
 ~~~shell
 $ ./rdifftime /tmp/dir1/ /tmp/dir2/

@@ -5,6 +5,8 @@ import argparse
 import hashlib
 import fnmatch
 
+version='0.0.1'
+
 def md5(fname):
     hash_md5 = hashlib.md5()
     with open(fname, "rb") as f:
